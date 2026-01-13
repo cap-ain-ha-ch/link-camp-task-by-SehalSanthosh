@@ -52,6 +52,10 @@ body {
   background: #00629B;
   color: #fff;
   padding: 1rem 0;
+
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
 }
 
 .navbar .container {
@@ -63,6 +67,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center; 
   gap: 1rem;
 }
 
@@ -96,6 +101,7 @@ body {
 /* SECTIONS */
 .section {
   padding: 4rem 1rem;
+  scroll-margin-top: 76px;
 }
 
 .section.light {
@@ -103,7 +109,7 @@ body {
 }
 
 .section.highlight {
-  background: #003b6f;
+  background: #002855;
   color: #fff;
   text-align: center;
 }
@@ -118,7 +124,7 @@ body {
 }
 
 .btn.primary {
-  background: #ffcc00;
+  background: #FFC72C;
   color: #000;
   font-weight: bold;
 }
@@ -159,12 +165,49 @@ body {
   text-align: center;
   padding: 1rem 0;
 }
+/* LOGO IN NAVBAR */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .section {
+    scroll-margin-top: 156px; 
+  }
+    .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  .logo span {
+    font-size: 0.95rem;
+  }
+
   .nav-links {
+    gap: 0.6rem;
     flex-direction: column;
   }
+
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  
 
   .schedule {
     flex-direction: column;
